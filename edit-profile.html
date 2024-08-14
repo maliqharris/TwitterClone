@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="edit-profile-section">
+            <h2>Edit Profile</h2>
+            <input type="text" id="profile-username" placeholder="Username">
+            <!-- <input type="email" id="profile-email" placeholder="Email"> -->
+            <button id="update-profile-button">Update Username</button>
+            <h3>Change Password</h3>
+            <input type="password" id="current-password" placeholder="Current Password">
+            <input type="password" id="new-password" placeholder="New Password">
+            <button id="change-password-button">Change Password</button>
+            <button id="back-button">Back</button>
+        </div>
+    </div>
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="edit-profile.js"></script>
+</body>
+</html>

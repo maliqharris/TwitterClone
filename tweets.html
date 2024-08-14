@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweets - Twitter Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h2>Twitter Clone</h2>
+        </header>
+        <div id="tweet-section">
+            <div id="tweets-container">
+                <ul id="tweets-list"></ul>
+            </div>
+            <div id="post-container">
+                <button id="post-button">Post</button>
+                <button id="editProfile-button">Edit Profile</button>
+                <button id="logout-button">Logout</button>
+            </div>
+        </div>
+        <div id="tweet-input-container" class="hidden">
+            <textarea id="tweet-content" placeholder="What's happening?"></textarea>
+            <!-- <input type="file" id="tweet-photo" accept="image/*"> -->
+            <button id="tweet-button">Tweet</button>
+        </div>
+        <div id="overlay" class="hidden"></div>
+    </div>
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="tweets.js"></script>
+    <!-- The before script to stop  bruteforce, i stopped Because it was breaking the app, instead of fix I jus looked for another 
+    way to get around the ability, I wrnty and went to the auth to add the fuctionality to all the different pages , I might add
+backl to get rid of the login messige when user logs out. Will work on later -->
+
+    <!-- <script>
+        import { auth } from "./firebase.js";
+        auth.onAuthStateChanged(user => {
+            if (!user) {
+                alert("Please login!");
+                window.location.href = "login.html"; // Redirect to the login page
+            }
+        });
+        </script> -->
+</body>
+</html>

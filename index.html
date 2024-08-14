@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- DECIDED NOT TO USE AND HAVE SEPERATE PAGES------------------------------------ -->
+    <div id="app">
+
+        <div id="login-section">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button id="login-button">Login</button>
+            <!-- to sign up -->
+            <p>Don't have an account? <span id="show-signup">Sign up</span></p>
+        </div>
+        <div id="signup-section" class="hidden">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-username" placeholder="Username">
+            <input type="email" id="signup-email" placeholder="Email">
+            <input type="password" id="signup-password" placeholder="Password">
+            <button id="signup-button">Sign Up</button>
+            
+            <p>Already have an account? <span id="show-login">Login</span></p>
+        </div>
+        <div id="tweet-section" class="hidden">
+            <h2>Welcome to Twitter Clone</h2>
+            <textarea id="tweet-content" placeholder="What's happening?"></textarea>
+            <button id="tweet-button">Tweet</button>
+            <button id="logout-button">Logout</button>
+            <ul id="tweets-list"></ul>
+        </div>
+        <div id="profile-section" class="hidden">
+            <h2>User Profile</h2>
+            <input type="text" id="profile-username" placeholder="Username">
+            <input type="email" id="profile-email" placeholder="Email" disabled>
+            <button id="update-profile-button">Update Profile</button>
+            <button id="delete-account-button">Delete Account</button>
+        </div>
+        
+    </div>
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="tweets.js"></script>
+</body>
+</html>
